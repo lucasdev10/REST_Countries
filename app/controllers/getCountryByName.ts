@@ -1,9 +1,7 @@
-const getCountryByName = (name: string) => fetch(`https://restcountries.eu/rest/v2/name/${name}`, {
-   method: "GET",
-   headers: {
-      "Accept": "application/json",
-      "Content-Type": "application/json",
-   },
-}).then(async (response) => await response.json()).then(async (res) => {
-   console.log(res);
-})
+const getCountryByName = (name: string) => new Promise((resolve) => {
+   fetch(`https://restcountries.eu/rest/v2/name/${name}`, {
+      method: "GET",
+   }).then(async (response) => await response.json()).then((res) => {
+      resolve(res);
+   });
+});
