@@ -7,19 +7,19 @@
   --color-dark-blue: #2b3945;
 
   /* (Dark Mode Background) */
-  --color-very-dark-blue: hsl(207, 26%, 17%);
+  --color-very-dark-blue: #202c37;
 
   /* (Light Mode Text) */
-  --color-very-dark-blue: hsl(200, 15%, 8%);
+  --color-very-dark: #111517;
 
   /* (Light Mode Input) */
-  --color-dark-gray: hsl(0, 0%, 52%);
+  --color-dark-gray: #858585;
 
   /* (Light Mode Background) */
-  --color-very-light-gray: hsl(0, 0%, 98%);
+  --color-very-light-gray: #fafafa;
 
   /* (Dark Mode Text & Light Mode Elements) */
-  --color-white: hsl(0, 0%, 100%);
+  --color-white: #ffffff;
 }
 
 /* Reset CSS and Global styles */
@@ -42,11 +42,20 @@ li {
 
 a {
   text-decoration: none;
+  color: currentColor;
+}
+
+a:active {
+  color: currentColor;
 }
 
 img {
   max-width: 100%;
   object-fit: cover;
+}
+
+p {
+  color: var(--color-very-dark);
 }
 
 html,
@@ -57,7 +66,7 @@ body {
   height: 100%;
   min-height: 100vh;
   overflow-y: auto;
-  background-color: #f7f7f7;
+  background-color: var(--color-very-light-gray);
   padding-bottom: 4vh;
 }
 

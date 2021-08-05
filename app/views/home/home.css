@@ -19,7 +19,7 @@
   height: 60px;
   box-shadow: 2px 2px 10px 1px #8383831c;
   border-radius: 7px;
-  background-color: #ffffff;
+  background-color: var(--color-white);
 }
 
 .search-input img {
@@ -35,7 +35,7 @@
 
 .filter {
   box-shadow: 2px 2px 10px 1px #8383831c;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   border-radius: 7px;
   max-width: 210px;
   flex: 1;
@@ -60,8 +60,14 @@
   flex: 1;
   height: 370px;
   box-shadow: 2px 2px 10px 1px #8383831c;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   border-radius: 7px;
+  cursor: pointer;
+  transition: transform 0.15s linear;
+}
+
+.country-item:hover {
+  transform: scale(1.1);
 }
 
 .country-item img {
