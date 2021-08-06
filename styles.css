@@ -54,10 +54,6 @@ img {
   object-fit: cover;
 }
 
-p {
-  color: var(--color-very-dark);
-}
-
 html,
 body {
   font-family: "Nunito Sans", sans-serif;
@@ -66,8 +62,33 @@ body {
   height: 100%;
   min-height: 100vh;
   overflow-y: auto;
-  background-color: var(--color-very-light-gray);
   padding-bottom: 4vh;
+}
+
+.dark-theme {
+  background-color: var(--color-very-dark-blue);
+  color: var(--color-white);
+}
+
+.dark-theme .header-container,
+.dark-theme .theme-mode,
+.dark-theme .theme-mode svg,
+.dark-theme .search-input,
+.dark-theme input,
+.dark-theme input::placeholder,
+.dark-theme .filter,
+.dark-theme .country-item,
+.dark-theme a,
+.dark-theme svg,
+.dark-theme .border-countries {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+  fill: var(--color-white);
+}
+
+.light-theme {
+  background-color: var(--color-very-light-gray);
+  color: var(--color-very-dark);
 }
 
 .header-container {
@@ -76,7 +97,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 3.3vh 5.5vw;
-  box-shadow: 2px 2px 10px 1px #8383831c;
+  box-shadow: 2px 2px 10px 1px #0f0f0f2b;
   background-color: #ffffff;
 }
 
