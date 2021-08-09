@@ -1,0 +1,97 @@
+main {
+  padding: 3.2vh 5.5vw 10vh;
+}
+
+.button-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: 145px;
+  padding: 10px;
+  margin: 9vh 0 11vh;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px 1px #0f0f0f2b;
+  background-color: var(--color-white);
+  font-size: 1.2em;
+  color: #808080;
+  transition: transform 0.1s linear;
+  cursor: pointer;
+}
+
+.button-back:hover {
+  transform: scale(1.1);
+}
+
+.country-details-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8vw;
+}
+
+.country-details-container > div {
+  flex: 1;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+.country-details-image img {
+  animation: entrance 0.7s ease-out forwards;
+}
+
+.country-details-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 4vh;
+  font-size: 1.2em;
+}
+
+.country-details-content h2 {
+  font-size: 2.2em;
+}
+
+.country-details-content > div {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1vh 1vw;
+}
+
+.country-details-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4vh;
+}
+
+.country-details-info div p {
+  margin: 1.6vh 0;
+}
+
+.country-details-info div p b {
+  margin-right: 5px;
+}
+
+.border-countries {
+  box-shadow: 1px 1px 10px 1px #0f0f0f2b;
+  background-color: var(--color-white);
+  padding: 5px 25px;
+  border-radius: 5px;
+  font-size: 0.75em;
+  color: #000000;
+}
+
+@keyframes entrance {
+  from {
+    opacity: 0.2;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
