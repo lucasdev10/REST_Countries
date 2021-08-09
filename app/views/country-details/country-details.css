@@ -40,6 +40,7 @@ main {
 
 .country-details-image img {
   height: 430px;
+  animation: entrance 0.7s ease-out forwards;
 }
 
 .country-details-content {
@@ -84,4 +85,15 @@ main {
   font-size: 0.85em;
   color: #808080;
   font-weight: bold;
+}
+
+@keyframes entrance {
+  from {
+    opacity: 0.2;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
