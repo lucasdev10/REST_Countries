@@ -29,8 +29,7 @@ handlerCountry = async () => {
     </div>
 
     <div>
-        <p><b>Border Countries:</b></p>
-        ${borders}
+        ${borders ? '<p><b>Border Countries:</b></p>' + borders : ''}
     </div>
     `;
 

@@ -39,7 +39,6 @@ main {
 }
 
 .country-details-image img {
-  height: 430px;
   animation: entrance 0.7s ease-out forwards;
 }
 
@@ -59,7 +58,7 @@ main {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 1vh 0.7vw;
+  gap: 1vh 1vw;
 }
 
 .country-details-info {

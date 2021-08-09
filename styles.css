@@ -22,7 +22,7 @@
   --color-white: #ffffff;
 }
 
-/* Reset CSS and Global styles */
+/* Reset CSS */
 * {
   margin: 0;
   padding: 0;
@@ -51,7 +51,7 @@ a:active {
 
 img {
   max-width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 html,
@@ -65,6 +65,7 @@ body {
   padding-bottom: 4vh;
 }
 
+/* Dark Theme */
 .dark-theme {
   background-color: var(--color-very-dark-blue);
   color: var(--color-white);
@@ -86,11 +87,13 @@ body {
   fill: var(--color-white);
 }
 
+/* Light Theme */
 .light-theme {
   background-color: var(--color-very-light-gray);
   color: var(--color-very-dark);
 }
 
+/* Global styles */
 .header-container {
   width: 100%;
   display: flex;
