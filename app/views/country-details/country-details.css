@@ -78,13 +78,12 @@ main {
 }
 
 .border-countries {
-  box-shadow: 0 0 5px 2px #0f0f0f2b;
+  box-shadow: 1px 1px 10px 1px #0f0f0f2b;
   background-color: var(--color-white);
   padding: 5px 25px;
   border-radius: 5px;
-  font-size: 0.85em;
-  color: #808080;
-  font-weight: bold;
+  font-size: 0.75em;
+  color: #000000;
 }
 
 @keyframes entrance {

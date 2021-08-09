@@ -1,7 +1,6 @@
 const countryItems = document.getElementById('countries-container');
 var allCountries = [];
 var allCountriesBackup = [];
-var regionSelected = 'africa';
 
 const findAllCountries = async (region) => {
    allCountries = await getCountriesByRegion(region);
@@ -11,24 +10,23 @@ const findAllCountries = async (region) => {
 
 handlerHTML = () => {
    allCountries.forEach(country => {
-      const countryItem = document.createElement('a');
-      countryItem.classList.add('country-item');
+      const countryItem = document.createElement('span');
       countryItem.innerHTML = `
+      <a class="country-item" href="../country-details/country-details.html?${country.name}">
          <img src="${country.flag}" alt="${country.name}">
          <h4>${country.name}</h4>
          <p><b>Population:</b> ${country.population.toLocaleString()}</p>
          <p><b>Region:</b> ${country.region}</p>
          <p><b>Capital:</b> ${country.capital}</p>
+      </a>
       `
       countryItems.appendChild(countryItem);
    });
 };
 
-findAllCountries('africa');
-
 chooseRegion = (region) => {
    countryItems.innerHTML = '';
-   regionSelected = region;
+   setRegion(region);
    findAllCountries(region);
 }
 
@@ -46,3 +44,17 @@ resetValues = () => {
    allCountries = allCountriesBackup;
    handlerHTML();
 };
+
+handlerGetAll = () => {
+   const regionSelected = localStorage.getItem('region');
+
+   if (regionSelected) {
+      document.getElementById('filter').value = regionSelected;
+      findAllCountries(regionSelected);
+   } else {
+      setRegion('africa');
+      findAllCountries('africa');
+   }
+};
+
+setRegion = (region) => localStorage.setItem('region', region);
