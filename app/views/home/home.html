@@ -8,7 +8,6 @@
    <title>Home</title>
    <link rel="stylesheet" href="../../../styles.css">
    <link rel="stylesheet" href="./home.css">
-   <script src="../../controllers/getAllCountries.js" type="text/javascript"></script>
 </head>
 
 <body class="light-theme" id="body" onload="handlerTheme()">
@@ -35,84 +34,28 @@
             <input type="search" name="search" id="search" placeholder="Search for a country...">
          </div>
 
-         <select class="filter" name="filter" id="filter">
-            <option hidden value="">Filter by Region</option>
+         <select class="filter" name="filter" id="filter" onchange="chooseRegion(this.value)">
             <option value="africa">Africa</option>
-            <option value="america">América</option>
+            <option value="americas">América</option>
             <option value="asia">Asia</option>
             <option value="europe">Europe</option>
             <option value="oceania">Oceania</option>
          </select>
       </div>
 
-      <section class="countries-container">
-         <a class="country-item" href="../country-details/country-details.html">
+      <section class="countries-container" id="countries-container">
+         <!-- <a class="country-item" href="../country-details/country-details.html">
             <img src="https://www.ifpb.edu.br/relacoes-internacionais/imagens/brasil/@@images/image.png" alt="Brasil">
             <h4>Brazil</h4>
             <p><b>Population:</b> 206.135,893</p>
             <p><b>Region:</b> Americas</p>
             <p><b>Capital:</b> Brasilia</p>
-         </a>
-
-         <a class="country-item" href="../country-details/country-details.html">
-            <img src="https://www.ifpb.edu.br/relacoes-internacionais/imagens/brasil/@@images/image.png" alt="Brasil">
-            <h4>Brazil</h4>
-            <p><b>Population:</b> 206.135,893</p>
-            <p><b>Region:</b> Americas</p>
-            <p><b>Capital:</b> Brasilia</p>
-         </a>
-
-         <a class="country-item" href="../country-details/country-details.html">
-            <img src="https://www.ifpb.edu.br/relacoes-internacionais/imagens/brasil/@@images/image.png" alt="Brasil">
-            <h4>Brazil</h4>
-            <p><b>Population:</b> 206.135,893</p>
-            <p><b>Region:</b> Americas</p>
-            <p><b>Capital:</b> Brasilia</p>
-         </a>
-
-         <a class="country-item" href="../country-details/country-details.html">
-            <img src="https://www.ifpb.edu.br/relacoes-internacionais/imagens/brasil/@@images/image.png" alt="Brasil">
-            <h4>Brazil</h4>
-            <p><b>Population:</b> 206.135,893</p>
-            <p><b>Region:</b> Americas</p>
-            <p><b>Capital:</b> Brasilia</p>
-         </a>
-
-         <a class="country-item" href="../country-details/country-details.html">
-            <img src="https://www.ifpb.edu.br/relacoes-internacionais/imagens/brasil/@@images/image.png" alt="Brasil">
-            <h4>Brazil</h4>
-            <p><b>Population:</b> 206.135,893</p>
-            <p><b>Region:</b> Americas</p>
-            <p><b>Capital:</b> Brasilia</p>
-         </a>
-
-         <a class="country-item" href="../country-details/country-details.html">
-            <img src="https://www.ifpb.edu.br/relacoes-internacionais/imagens/brasil/@@images/image.png" alt="Brasil">
-            <h4>Brazil</h4>
-            <p><b>Population:</b> 206.135,893</p>
-            <p><b>Region:</b> Americas</p>
-            <p><b>Capital:</b> Brasilia</p>
-         </a>
-
-         <a class="country-item" href="../country-details/country-details.html">
-            <img src="https://www.ifpb.edu.br/relacoes-internacionais/imagens/brasil/@@images/image.png" alt="Brasil">
-            <h4>Brazil</h4>
-            <p><b>Population:</b> 206.135,893</p>
-            <p><b>Region:</b> Americas</p>
-            <p><b>Capital:</b> Brasilia</p>
-         </a>
-
-         <a class="country-item" href="../country-details/country-details.html">
-            <img src="https://www.ifpb.edu.br/relacoes-internacionais/imagens/brasil/@@images/image.png" alt="Brasil">
-            <h4>Brazil</h4>
-            <p><b>Population:</b> 206.135,893</p>
-            <p><b>Region:</b> Americas</p>
-            <p><b>Capital:</b> Brasilia</p>
-         </a>
+         </a> -->
       </section>
    </main>
 
    <script src="../../controllers/theme.js" type="text/javascript"></script>
+   <script src="../../controllers/getCountriesByRegion.js" type="text/javascript"></script>
    <script src="./home.js" type="text/javascript"></script>
 </body>
 
