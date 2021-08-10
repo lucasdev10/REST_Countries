@@ -12,7 +12,7 @@ handlerHTML = () => {
    allCountries.forEach(country => {
       const countryItem = document.createElement('span');
       countryItem.innerHTML = `
-      <a class="country-item" href="../country-details/country-details.html?${country.name}">
+      <a class="country-item" href="./app/views/country-details/country-details.html?${country.name}">
          <img src="${country.flag}" alt="${country.name}">
          <h4>${country.name}</h4>
          <p><b>Population:</b> ${country.population.toLocaleString()}</p>
